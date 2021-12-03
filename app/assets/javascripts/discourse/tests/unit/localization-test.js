@@ -40,8 +40,10 @@ module("initializer:localization", {
 
 test("translation overrides", function (assert) {
   I18n._overrides = {
-    "js.composer.reply": "WAT",
-    "js.topic.reply.help": "foobar",
+    fr: {
+      "js.composer.reply": "WAT",
+      "js.topic.reply.help": "foobar",
+    },
   };
   LocalizationInitializer.initialize(getApplication());
 
